@@ -23,6 +23,19 @@ export class HomecontrolComponent {
     this.sendWhiteRequest("lamp3", this.corridor);
   }
 
+  roomChange() {
+    console.log("change " + this.room)
+    this.sendWhiteRequest("lamp4", this.room);
+  }
+
+  rightChange() {
+    this.sendColorRequest("lamp1", this.rightR, this.rightG, this.rightB);
+  }
+
+  leftChange() {
+    this.sendColorRequest("lamp2", this.leftR, this.leftG, this.leftB);
+  }
+
   sendWhiteRequest(lamp: string, w: number) {
     this.http.post<any>('/api/v1/send/lamp', { req: lamp, w }).subscribe(data => {
       console.log("sent");
