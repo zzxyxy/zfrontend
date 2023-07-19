@@ -9,7 +9,7 @@ pipeline {
         }
         stage('get dependencies') {
             steps {
-                sh 'npm install --force --loglevel verbose'
+                sh 'npm install --loglevel verbose'
             }
         }
         stage('build') {
