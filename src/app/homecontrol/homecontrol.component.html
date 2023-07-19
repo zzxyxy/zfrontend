@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home control!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello!</h1>
+
+      <label for="customRange1" class="form-label">Folyosó</label>
+      <input type="range" class="form-range" id="corridor" [(ngModel)]="corridor" (change)="corridorChange()">
+      <hr>
+      <label for="customRange1" class="form-label">Szoba</label>
+      <input type="range" class="form-range" id="room" [(ngModel)]="room">
+      <hr>
+      <label for="customRange1" class="form-label">Jobb R</label>
+      <input type="range" class="form-range" id="rightR" [(ngModel)]="rightR">
+      <label for="customRange1" class="form-label">Jobb G</label>
+      <input type="range" class="form-range" id="rightG" [(ngModel)]="rightG">
+      <label for="customRange1" class="form-label">Jobb B</label>
+      <input type="range" class="form-range" id="rightB" [(ngModel)]="rightB">
+      <hr>
+      <label for="customRange1" class="form-label">Bal R</label>
+      <input type="range" class="form-range" id="leftR" [(ngModel)]="leftR">
+      <label for="customRange1" class="form-label">Bal G</label>
+      <input type="range" class="form-range" id="leftG" [(ngModel)]="leftG">
+      <label for="customRange1" class="form-label">bal B</label>
+      <input type="range" class="form-range" id="leftB" [(ngModel)]="leftB">
+
+    </div>
+  </body>
+</html>
