@@ -22,5 +22,22 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/**/*', followSymlinks: false, onlyIfSuccessful: true
             }
         }
+        stage("Remove app") {
+            steps {
+                sh '''
+#!/bin/bash
+HOST=zxyxy.net
+USER=zxyxynet
+PASSWORD=3oR37v3Hho
+
+lftp -u $USER,$PASSWORD $HOST << EOF
+set ssl:verify-certificate false
+rm *.js
+rm *.html
+rm *.css
+rm *.ico
+EOF'''
+            }
+        }
     }
 }
